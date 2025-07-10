@@ -1,0 +1,28 @@
+
+<!DOCTYPE html><html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <title>تفاصيل المستشفى – منصة صحّتي اليمنيّة</title>
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+  <h2>تفاصيل المستشفى</h2>
+  <div id="details"></div>
+  <script>
+    const params = new URLSearchParams(location.search);
+    const id = params.get('id');
+    fetch('hospitals.json').then(r=>r.json()).then(data=>{
+      const h = data.find(x=>x.id===id);
+      if(!h) return document.getElementById('details').innerHTML = 'لا يوجد بيانات';
+      document.getElementById('details').innerHTML = `
+        <h3>${h.name}</h3>
+        <p>النوع: ${h.type}</p>
+        <p>المحافظة: ${h.governorate}</p>
+        <p>العنوان: ${h.location}</p>
+        <p>الأقسام: ${h.departments.join('، ')}</p>
+        <p>أفضل الأطباء: ${h.top_doctors.join('، ')}</p>
+        <a href="booking.html">حجز موعد</a>
+      `;
+    });
+  </script>
+</body></html>

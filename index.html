@@ -1,0 +1,33 @@
+
+<!DOCTYPE html><html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <title>منصة صحّتي اليمنيّة – تسجيل الدخول</title>
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body class="login-bg">
+  <section class="auth-box">
+    <h2>تسجيل مستخدم جديد</h2>
+    <form id="signup">
+      <input type="text" placeholder="الاسم الكامل" required>
+      <input type="email" placeholder="البريد الإلكتروني" required>
+      <input type="password" placeholder="كلمة المرور" required>
+      <button type="submit">تسجيل</button>
+    </form>
+
+    <hr>
+
+    <h2>دخول</h2>
+    <form action="onboarding.html">
+      <input type="email" placeholder="البريد الإلكتروني">
+      <input type="password" placeholder="كلمة المرور">
+      <label><input type="checkbox"> تذكّرني</label>
+      <button>دخول</button>
+    </form>
+  </section>
+  <script>
+    document.getElementById('signup').onsubmit = e=>{
+      e.preventDefault(); location.href='onboarding.html';
+    }
+  </script>
+</body></html>

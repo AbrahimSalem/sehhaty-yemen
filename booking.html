@@ -1,0 +1,27 @@
+
+<!DOCTYPE html><html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <title>حجز موعد – منصة صحّتي اليمنيّة</title>
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+  <h2>حجز موعد</h2>
+  <form>
+    <input type="text" placeholder="الاسم الكامل" required>
+    <input type="text" placeholder="رقم الهاتف" required>
+    <label>هل يوجد مرافق؟
+      <select id="companion">
+        <option value="no">لا</option>
+        <option value="yes">نعم</option>
+      </select>
+    </label>
+    <input type="text" id="companionName" placeholder="اسم المرافق" style="display:none;">
+    <button type="submit">إرسال الطلب</button>
+  </form>
+  <script>
+    document.getElementById('companion').onchange = e=>{
+      document.getElementById('companionName').style.display = e.target.value === 'yes' ? 'block' : 'none';
+    };
+  </script>
+</body></html>

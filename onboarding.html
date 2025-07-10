@@ -1,0 +1,29 @@
+
+<!DOCTYPE html><html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <title>الإرشادات – منصة صحّتي اليمنيّة</title>
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+  <section>
+    <h2>مرحبًا بك في منصّة صحّتي اليمنيّة</h2>
+    <p>هنا ستجد دليلًا لاستخدام المنصة.</p>
+    <div>
+      <button onclick="nextStep()">التالي</button>
+      <button onclick="skip()">تخطي</button>
+    </div>
+    <progress id="progress" value="0" max="100"></progress>
+  </section>
+  <script>
+    let progress = 0;
+    function nextStep(){
+      progress += 25;
+      document.getElementById('progress').value = progress;
+      if(progress >= 100) location.href = 'hospitals.html';
+    }
+    function skip(){
+      location.href = 'hospitals.html';
+    }
+  </script>
+</body></html>

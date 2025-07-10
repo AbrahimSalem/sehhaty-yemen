@@ -1,0 +1,10 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap');
+*{font-family:'Cairo',sans-serif;box-sizing:border-box}
+body{margin:0;background:#f4f8fb;color:#222}
+a{color:#007b83;text-decoration:none}
+.card{background:#fff;padding:1rem;border-radius:8px;margin-bottom:1rem;box-shadow:0 1px 4px rgba(0,0,0,.1)}
+button{background:#007b83;color:#fff;border:none;padding:.6rem 1.4rem;border-radius:4px;cursor:pointer}
+.login-bg{display:flex;align-items:center;justify-content:center;height:100vh;background:#e0f0f2}
+.auth-box{background:#fff;padding:2rem 3rem;border-radius:10px;width:320px;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+input,select{width:100%;padding:.5rem;margin:.4rem 0;border:1px solid #ccc;border-radius:4px}
